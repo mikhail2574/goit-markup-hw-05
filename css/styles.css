@@ -86,6 +86,7 @@ h1{
     display: block;
     margin: 0 auto;
     min-width: 169px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .main-btn:hover, .main-btn:focus {
@@ -104,13 +105,16 @@ h1{
     color: var(--banner-bg);
     padding: 24px 0;
     position: relative;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-item:hover,
 .nav-item:focus {
     color: var(--active-color);
-    transition-duration: .25s;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);}
+
+.current-page{
+    color: var(--active-color);
 }
 
 .nav-item.current-page::after{
@@ -120,7 +124,7 @@ h1{
     border-radius: 2px;
     background-color: var(--active-color);
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     left: 0;
 }
 
@@ -456,8 +460,7 @@ nav{
 
 .person-icon:hover, .person-icon:focus{
     background-color: var(--active-color);
-    transition-duration: .25s;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .person-icon-svg{
@@ -524,8 +527,7 @@ nav{
 .customers-icon-link:focus {
     color: var(--active-color);
     border: 1px solid var(--active-color);
-    transition-duration: .25s;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-icon-link svg{
@@ -557,10 +559,7 @@ nav{
 .social-media-icon-link:hover,
 .social-media-icon-link:focus{
     background-color: var(--icon-active);
-    transition-duration: .25s;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: .25s;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-media-icon-svg{
