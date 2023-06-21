@@ -113,7 +113,8 @@ h1{
 .address-item:focus,
 .address-item:hover{
     color: var(--active-color);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);}
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 .current-page{
     color: var(--active-color);
@@ -185,8 +186,10 @@ button{
     color: var(--banner-color);
     background-color: var(--active-color);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-    transition-duration: .25s;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1),
+            background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+            border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+            box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card-title{
@@ -195,13 +198,6 @@ button{
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: var(--banner-bg);
-}
-
-.navigation a:hover, .navigation a:active {
-    color: var(--active-color);
-    text-decoration: underline 4px solid var(--active-color);
-    transition-duration: .25s;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-main{
@@ -265,13 +261,6 @@ footer .container{
     font-style: normal;
 }
 
-.nav-address a:hover,
-.nav-address a:focus {
-    color: var(--active-color);
-    transition-duration: .25s;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .main-work{
     padding-bottom: 120px;
 }
@@ -333,6 +322,10 @@ nav{
 
 .card-filter{
     margin: 0;
+}
+
+.portfolio-card:hover .card-filter, .portfolio-card:focus .card-filter{
+    transform: translateY(0);
 }
 
 .header-main{
@@ -573,10 +566,15 @@ nav{
     margin-right: 120px;
 }
 
+.portfolio-card a{
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .portfolio-card a:hover, .portfolio-card a:focus{
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
         0px 1px 1px rgba(46, 47, 66, 0.16),
         0px 2px 1px rgba(46, 47, 66, 0.08);
+    transform: translateY(0%);
 }
 
 .portfolio-wrapper{
@@ -585,6 +583,7 @@ nav{
 }
 
 .portfolio-overlay{
+    display: inline-block;
     padding: 40px 32px;
     color: var(--banner-color);
     transform: translateY(100%);
@@ -602,7 +601,6 @@ nav{
 }
 
 .portfolio-card:hover .portfolio-overlay{
-    transform: translateY(0);
     opacity: 1;
 }
 
@@ -661,4 +659,12 @@ nav{
 .modal-escape:hover, .modal-escape:focus{
     background-color: var(--active-color);
     border: none;
+}
+
+.close-modal-icon{
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-escape:hover .close-modal-icon, .modal-escape:focus .close-modal-icon{
+    fill: var(--banner-color);
 }
