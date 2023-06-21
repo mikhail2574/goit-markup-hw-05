@@ -602,6 +602,7 @@ nav{
 
 .portfolio-card:hover .portfolio-overlay{
     opacity: 1;
+    transform: translateY(0%);
 }
 
 .backdrop{
